@@ -1,0 +1,855 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E9442F3544834B36052BCA5 /* Pods_ReactiveBrewDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5519045E5D1A05268BC6123 /* Pods_ReactiveBrewDog.framework */; };
+		46765DA4FEB63F649C49ABB5 /* Pods_ReactiveBrewDogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296CCB7EE8523E0D403111ED /* Pods_ReactiveBrewDogTests.framework */; };
+		9DFE36AEA78E1DDA6A6F6288 /* Pods_ReactiveBrewDogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C8D4F757F60D97753108FD /* Pods_ReactiveBrewDogUITests.framework */; };
+		DE9C86911FDAEDF000840276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86901FDAEDF000840276 /* AppDelegate.swift */; };
+		DE9C86961FDAEDF000840276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9C86941FDAEDF000840276 /* Main.storyboard */; };
+		DE9C86991FDAEDF000840276 /* ReactiveBrewDog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86971FDAEDF000840276 /* ReactiveBrewDog.xcdatamodeld */; };
+		DE9C869B1FDAEDF000840276 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE9C869A1FDAEDF000840276 /* Assets.xcassets */; };
+		DE9C869E1FDAEDF000840276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9C869C1FDAEDF000840276 /* LaunchScreen.storyboard */; };
+		DE9C86A91FDAEDF000840276 /* ReactiveBrewDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86A81FDAEDF000840276 /* ReactiveBrewDogTests.swift */; };
+		DE9C86B41FDAEDF000840276 /* ReactiveBrewDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86B31FDAEDF000840276 /* ReactiveBrewDogUITests.swift */; };
+		DE9C86C21FDAF1B600840276 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86C11FDAF1B600840276 /* Beer.swift */; };
+		DE9C86C51FDAF25800840276 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86C41FDAF25800840276 /* BeerListViewController.swift */; };
+		DE9C86C81FDAF29700840276 /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86C71FDAF29700840276 /* BeerListViewModel.swift */; };
+		DE9C86CA1FDAF33100840276 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86C91FDAF33100840276 /* APIManager.swift */; };
+		DECF76C31FDB04F100D54DF9 /* BeerRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECF76C21FDB04F100D54DF9 /* BeerRequestManager.swift */; };
+		DECF76C51FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */; };
+		DECF76C81FDB22DE00D54DF9 /* BeerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECF76C71FDB22DE00D54DF9 /* BeerCellViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE9C86A51FDAEDF000840276 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE9C86851FDAEDF000840276 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9C868C1FDAEDF000840276;
+			remoteInfo = ReactiveBrewDog;
+		};
+		DE9C86B01FDAEDF000840276 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE9C86851FDAEDF000840276 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9C868C1FDAEDF000840276;
+			remoteInfo = ReactiveBrewDog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		296CCB7EE8523E0D403111ED /* Pods_ReactiveBrewDogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveBrewDogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C8D4F757F60D97753108FD /* Pods_ReactiveBrewDogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveBrewDogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322FF9EFCB79324907817701 /* Pods-ReactiveBrewDogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogTests/Pods-ReactiveBrewDogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		32DF2DF5C693C9CC60AEB669 /* Pods-ReactiveBrewDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDog/Pods-ReactiveBrewDog.debug.xcconfig"; sourceTree = "<group>"; };
+		75777C10666812EA4ADF8540 /* Pods-ReactiveBrewDogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogTests/Pods-ReactiveBrewDogTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE9C868D1FDAEDF000840276 /* ReactiveBrewDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveBrewDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9C86901FDAEDF000840276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE9C86951FDAEDF000840276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE9C86981FDAEDF000840276 /* ReactiveBrewDog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReactiveBrewDog.xcdatamodel; sourceTree = "<group>"; };
+		DE9C869A1FDAEDF000840276 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE9C869D1FDAEDF000840276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE9C869F1FDAEDF000840276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9C86A41FDAEDF000840276 /* ReactiveBrewDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveBrewDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9C86A81FDAEDF000840276 /* ReactiveBrewDogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveBrewDogTests.swift; sourceTree = "<group>"; };
+		DE9C86AA1FDAEDF000840276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9C86AF1FDAEDF000840276 /* ReactiveBrewDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveBrewDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE9C86B31FDAEDF000840276 /* ReactiveBrewDogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveBrewDogUITests.swift; sourceTree = "<group>"; };
+		DE9C86B51FDAEDF000840276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9C86C11FDAF1B600840276 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		DE9C86C41FDAF25800840276 /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
+		DE9C86C71FDAF29700840276 /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
+		DE9C86C91FDAF33100840276 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DECF76C21FDB04F100D54DF9 /* BeerRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRequestManager.swift; sourceTree = "<group>"; };
+		DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBeerCollectionViewCell.swift; sourceTree = "<group>"; };
+		DECF76C71FDB22DE00D54DF9 /* BeerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCellViewModel.swift; sourceTree = "<group>"; };
+		E3FD40C64392393E059C0FCD /* Pods-ReactiveBrewDogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogUITests/Pods-ReactiveBrewDogUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E90C9F9325900E76C038472A /* Pods-ReactiveBrewDogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogUITests/Pods-ReactiveBrewDogUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EBD7850E08E08BFD4182B7F8 /* Pods-ReactiveBrewDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDog/Pods-ReactiveBrewDog.release.xcconfig"; sourceTree = "<group>"; };
+		F5519045E5D1A05268BC6123 /* Pods_ReactiveBrewDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveBrewDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE9C868A1FDAEDF000840276 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E9442F3544834B36052BCA5 /* Pods_ReactiveBrewDog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9C86A11FDAEDF000840276 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46765DA4FEB63F649C49ABB5 /* Pods_ReactiveBrewDogTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9C86AC1FDAEDF000840276 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DFE36AEA78E1DDA6A6F6288 /* Pods_ReactiveBrewDogUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60429DD884FB1B231F1E564E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32DF2DF5C693C9CC60AEB669 /* Pods-ReactiveBrewDog.debug.xcconfig */,
+				EBD7850E08E08BFD4182B7F8 /* Pods-ReactiveBrewDog.release.xcconfig */,
+				322FF9EFCB79324907817701 /* Pods-ReactiveBrewDogTests.debug.xcconfig */,
+				75777C10666812EA4ADF8540 /* Pods-ReactiveBrewDogTests.release.xcconfig */,
+				E90C9F9325900E76C038472A /* Pods-ReactiveBrewDogUITests.debug.xcconfig */,
+				E3FD40C64392393E059C0FCD /* Pods-ReactiveBrewDogUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE990A8EBE2BD50EF85F459D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5519045E5D1A05268BC6123 /* Pods_ReactiveBrewDog.framework */,
+				296CCB7EE8523E0D403111ED /* Pods_ReactiveBrewDogTests.framework */,
+				30C8D4F757F60D97753108FD /* Pods_ReactiveBrewDogUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE9C86841FDAEDF000840276 = {
+			isa = PBXGroup;
+			children = (
+				DE9C868F1FDAEDF000840276 /* ReactiveBrewDog */,
+				DE9C86A71FDAEDF000840276 /* ReactiveBrewDogTests */,
+				DE9C86B21FDAEDF000840276 /* ReactiveBrewDogUITests */,
+				DE9C868E1FDAEDF000840276 /* Products */,
+				60429DD884FB1B231F1E564E /* Pods */,
+				CE990A8EBE2BD50EF85F459D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE9C868E1FDAEDF000840276 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C868D1FDAEDF000840276 /* ReactiveBrewDog.app */,
+				DE9C86A41FDAEDF000840276 /* ReactiveBrewDogTests.xctest */,
+				DE9C86AF1FDAEDF000840276 /* ReactiveBrewDogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE9C868F1FDAEDF000840276 /* ReactiveBrewDog */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C86C31FDAF1BC00840276 /* Model */,
+				DE9C86CB1FDAF33E00840276 /* Managers */,
+				DE9C86C61FDAF27300840276 /* View Controllers */,
+				DE9C86CC1FDAF35000840276 /* Supporting Files */,
+			);
+			path = ReactiveBrewDog;
+			sourceTree = "<group>";
+		};
+		DE9C86A71FDAEDF000840276 /* ReactiveBrewDogTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C86A81FDAEDF000840276 /* ReactiveBrewDogTests.swift */,
+				DE9C86AA1FDAEDF000840276 /* Info.plist */,
+			);
+			path = ReactiveBrewDogTests;
+			sourceTree = "<group>";
+		};
+		DE9C86B21FDAEDF000840276 /* ReactiveBrewDogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C86B31FDAEDF000840276 /* ReactiveBrewDogUITests.swift */,
+				DE9C86B51FDAEDF000840276 /* Info.plist */,
+			);
+			path = ReactiveBrewDogUITests;
+			sourceTree = "<group>";
+		};
+		DE9C86C31FDAF1BC00840276 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C86C11FDAF1B600840276 /* Beer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE9C86C61FDAF27300840276 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C86C41FDAF25800840276 /* BeerListViewController.swift */,
+				DE9C86C71FDAF29700840276 /* BeerListViewModel.swift */,
+				DECF76C61FDB22B000D54DF9 /* Cells */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DE9C86CB1FDAF33E00840276 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C86C91FDAF33100840276 /* APIManager.swift */,
+				DECF76C21FDB04F100D54DF9 /* BeerRequestManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DE9C86CC1FDAF35000840276 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C86901FDAEDF000840276 /* AppDelegate.swift */,
+				DE9C86941FDAEDF000840276 /* Main.storyboard */,
+				DE9C869A1FDAEDF000840276 /* Assets.xcassets */,
+				DE9C869C1FDAEDF000840276 /* LaunchScreen.storyboard */,
+				DE9C869F1FDAEDF000840276 /* Info.plist */,
+				DE9C86971FDAEDF000840276 /* ReactiveBrewDog.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DECF76C61FDB22B000D54DF9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */,
+				DECF76C71FDB22DE00D54DF9 /* BeerCellViewModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE9C868C1FDAEDF000840276 /* ReactiveBrewDog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE9C86B81FDAEDF000840276 /* Build configuration list for PBXNativeTarget "ReactiveBrewDog" */;
+			buildPhases = (
+				D184A2F688241A1F1C1795BC /* [CP] Check Pods Manifest.lock */,
+				DE9C86891FDAEDF000840276 /* Sources */,
+				DE9C868A1FDAEDF000840276 /* Frameworks */,
+				DE9C868B1FDAEDF000840276 /* Resources */,
+				D0101DC0F0E1899FC7F29367 /* [CP] Embed Pods Frameworks */,
+				8ADC3A3791AC40A7C11B165B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactiveBrewDog;
+			productName = ReactiveBrewDog;
+			productReference = DE9C868D1FDAEDF000840276 /* ReactiveBrewDog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE9C86A31FDAEDF000840276 /* ReactiveBrewDogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE9C86BB1FDAEDF000840276 /* Build configuration list for PBXNativeTarget "ReactiveBrewDogTests" */;
+			buildPhases = (
+				F0B391BCA6400E693DC5C927 /* [CP] Check Pods Manifest.lock */,
+				DE9C86A01FDAEDF000840276 /* Sources */,
+				DE9C86A11FDAEDF000840276 /* Frameworks */,
+				DE9C86A21FDAEDF000840276 /* Resources */,
+				FF92D98841E8FA3AF933596A /* [CP] Embed Pods Frameworks */,
+				B8669D71658CE052A9555BBF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE9C86A61FDAEDF000840276 /* PBXTargetDependency */,
+			);
+			name = ReactiveBrewDogTests;
+			productName = ReactiveBrewDogTests;
+			productReference = DE9C86A41FDAEDF000840276 /* ReactiveBrewDogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE9C86AE1FDAEDF000840276 /* ReactiveBrewDogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE9C86BE1FDAEDF000840276 /* Build configuration list for PBXNativeTarget "ReactiveBrewDogUITests" */;
+			buildPhases = (
+				6CCC5D27C98838B01575DDD4 /* [CP] Check Pods Manifest.lock */,
+				DE9C86AB1FDAEDF000840276 /* Sources */,
+				DE9C86AC1FDAEDF000840276 /* Frameworks */,
+				DE9C86AD1FDAEDF000840276 /* Resources */,
+				8127501FBA6FFE11DB85A439 /* [CP] Embed Pods Frameworks */,
+				BAB942F8BEACEDBB0919A629 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE9C86B11FDAEDF000840276 /* PBXTargetDependency */,
+			);
+			name = ReactiveBrewDogUITests;
+			productName = ReactiveBrewDogUITests;
+			productReference = DE9C86AF1FDAEDF000840276 /* ReactiveBrewDogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE9C86851FDAEDF000840276 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Tom Seymour";
+				TargetAttributes = {
+					DE9C868C1FDAEDF000840276 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					DE9C86A31FDAEDF000840276 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE9C868C1FDAEDF000840276;
+					};
+					DE9C86AE1FDAEDF000840276 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE9C868C1FDAEDF000840276;
+					};
+				};
+			};
+			buildConfigurationList = DE9C86881FDAEDF000840276 /* Build configuration list for PBXProject "ReactiveBrewDog" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE9C86841FDAEDF000840276;
+			productRefGroup = DE9C868E1FDAEDF000840276 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE9C868C1FDAEDF000840276 /* ReactiveBrewDog */,
+				DE9C86A31FDAEDF000840276 /* ReactiveBrewDogTests */,
+				DE9C86AE1FDAEDF000840276 /* ReactiveBrewDogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE9C868B1FDAEDF000840276 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9C869E1FDAEDF000840276 /* LaunchScreen.storyboard in Resources */,
+				DE9C869B1FDAEDF000840276 /* Assets.xcassets in Resources */,
+				DE9C86961FDAEDF000840276 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9C86A21FDAEDF000840276 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9C86AD1FDAEDF000840276 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CCC5D27C98838B01575DDD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactiveBrewDogUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8127501FBA6FFE11DB85A439 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveBrewDogUITests/Pods-ReactiveBrewDogUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ADC3A3791AC40A7C11B165B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveBrewDog/Pods-ReactiveBrewDog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8669D71658CE052A9555BBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveBrewDogTests/Pods-ReactiveBrewDogTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAB942F8BEACEDBB0919A629 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveBrewDogUITests/Pods-ReactiveBrewDogUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0101DC0F0E1899FC7F29367 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveBrewDog/Pods-ReactiveBrewDog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveBrewDog/Pods-ReactiveBrewDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D184A2F688241A1F1C1795BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactiveBrewDog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0B391BCA6400E693DC5C927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactiveBrewDogTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF92D98841E8FA3AF933596A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveBrewDogTests/Pods-ReactiveBrewDogTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE9C86891FDAEDF000840276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DECF76C51FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift in Sources */,
+				DE9C86CA1FDAF33100840276 /* APIManager.swift in Sources */,
+				DE9C86C51FDAF25800840276 /* BeerListViewController.swift in Sources */,
+				DECF76C31FDB04F100D54DF9 /* BeerRequestManager.swift in Sources */,
+				DE9C86991FDAEDF000840276 /* ReactiveBrewDog.xcdatamodeld in Sources */,
+				DECF76C81FDB22DE00D54DF9 /* BeerCellViewModel.swift in Sources */,
+				DE9C86C21FDAF1B600840276 /* Beer.swift in Sources */,
+				DE9C86911FDAEDF000840276 /* AppDelegate.swift in Sources */,
+				DE9C86C81FDAF29700840276 /* BeerListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9C86A01FDAEDF000840276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9C86A91FDAEDF000840276 /* ReactiveBrewDogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9C86AB1FDAEDF000840276 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9C86B41FDAEDF000840276 /* ReactiveBrewDogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE9C86A61FDAEDF000840276 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE9C868C1FDAEDF000840276 /* ReactiveBrewDog */;
+			targetProxy = DE9C86A51FDAEDF000840276 /* PBXContainerItemProxy */;
+		};
+		DE9C86B11FDAEDF000840276 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE9C868C1FDAEDF000840276 /* ReactiveBrewDog */;
+			targetProxy = DE9C86B01FDAEDF000840276 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE9C86941FDAEDF000840276 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE9C86951FDAEDF000840276 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE9C869C1FDAEDF000840276 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE9C869D1FDAEDF000840276 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE9C86B61FDAEDF000840276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE9C86B71FDAEDF000840276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE9C86B91FDAEDF000840276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32DF2DF5C693C9CC60AEB669 /* Pods-ReactiveBrewDog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P7Y3CKA76T;
+				INFOPLIST_FILE = "$(SRCROOT)/ReactiveBrewDog/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tom-Seymour.ReactiveBrewDog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE9C86BA1FDAEDF000840276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBD7850E08E08BFD4182B7F8 /* Pods-ReactiveBrewDog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P7Y3CKA76T;
+				INFOPLIST_FILE = "$(SRCROOT)/ReactiveBrewDog/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tom-Seymour.ReactiveBrewDog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE9C86BC1FDAEDF000840276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322FF9EFCB79324907817701 /* Pods-ReactiveBrewDogTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P7Y3CKA76T;
+				INFOPLIST_FILE = ReactiveBrewDogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tom-Seymour.ReactiveBrewDogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveBrewDog.app/ReactiveBrewDog";
+			};
+			name = Debug;
+		};
+		DE9C86BD1FDAEDF000840276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75777C10666812EA4ADF8540 /* Pods-ReactiveBrewDogTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P7Y3CKA76T;
+				INFOPLIST_FILE = ReactiveBrewDogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tom-Seymour.ReactiveBrewDogTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveBrewDog.app/ReactiveBrewDog";
+			};
+			name = Release;
+		};
+		DE9C86BF1FDAEDF000840276 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90C9F9325900E76C038472A /* Pods-ReactiveBrewDogUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P7Y3CKA76T;
+				INFOPLIST_FILE = ReactiveBrewDogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tom-Seymour.ReactiveBrewDogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReactiveBrewDog;
+			};
+			name = Debug;
+		};
+		DE9C86C01FDAEDF000840276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3FD40C64392393E059C0FCD /* Pods-ReactiveBrewDogUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P7Y3CKA76T;
+				INFOPLIST_FILE = ReactiveBrewDogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tom-Seymour.ReactiveBrewDogUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReactiveBrewDog;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE9C86881FDAEDF000840276 /* Build configuration list for PBXProject "ReactiveBrewDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9C86B61FDAEDF000840276 /* Debug */,
+				DE9C86B71FDAEDF000840276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE9C86B81FDAEDF000840276 /* Build configuration list for PBXNativeTarget "ReactiveBrewDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9C86B91FDAEDF000840276 /* Debug */,
+				DE9C86BA1FDAEDF000840276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE9C86BB1FDAEDF000840276 /* Build configuration list for PBXNativeTarget "ReactiveBrewDogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9C86BC1FDAEDF000840276 /* Debug */,
+				DE9C86BD1FDAEDF000840276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE9C86BE1FDAEDF000840276 /* Build configuration list for PBXNativeTarget "ReactiveBrewDogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE9C86BF1FDAEDF000840276 /* Debug */,
+				DE9C86C01FDAEDF000840276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE9C86971FDAEDF000840276 /* ReactiveBrewDog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE9C86981FDAEDF000840276 /* ReactiveBrewDog.xcdatamodel */,
+			);
+			currentVersion = DE9C86981FDAEDF000840276 /* ReactiveBrewDog.xcdatamodel */;
+			path = ReactiveBrewDog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DE9C86851FDAEDF000840276 /* Project object */;
+}
