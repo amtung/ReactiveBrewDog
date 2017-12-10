@@ -13,6 +13,18 @@ class BeerCellViewModel {
     
     var beer: Beer!
     
+    var displayName: String {
+        return beer.name
+    }
+    
+    var displayTagline: String {
+        return beer.tagline
+    }
+    
+    var displayAbvIbu: String {
+        return "abv: \(beer.abv)%)"
+    }
+    
     init(beer: Beer) {
         self.beer = beer
     }

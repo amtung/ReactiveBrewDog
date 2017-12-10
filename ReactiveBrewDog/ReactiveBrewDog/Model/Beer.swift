@@ -16,7 +16,7 @@ struct Beer: Codable {
     let beerDescription: String
     let imageURLString: String
     let abv: Double
-    let ibu: Double
+    let ibu: Double?
     
     enum CodingKeys: String, CodingKey {
         case name, id, tagline, abv, ibu

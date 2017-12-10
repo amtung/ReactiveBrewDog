@@ -188,8 +188,8 @@
 		DE9C86C61FDAF27300840276 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DE9C86C41FDAF25800840276 /* BeerListViewController.swift */,
 				DE9C86C71FDAF29700840276 /* BeerListViewModel.swift */,
+				DE9C86C41FDAF25800840276 /* BeerListViewController.swift */,
 				DECF76C61FDB22B000D54DF9 /* Cells */,
 			);
 			path = "View Controllers";
@@ -220,8 +220,8 @@
 		DECF76C61FDB22B000D54DF9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */,
 				DECF76C71FDB22DE00D54DF9 /* BeerCellViewModel.swift */,
+				DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

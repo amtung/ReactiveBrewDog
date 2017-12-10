@@ -17,7 +17,7 @@ enum APIError: Error {
 
 class APIManager {
     
-   static func getData(urlString: String) -> SignalProducer<Data, APIError> {
+   static func fetchData(urlString: String) -> SignalProducer<Data, APIError> {
         return SignalProducer { observer, disposable in
             guard let url = URL(string: urlString) else { return }
             let request = URLRequest(url: url)

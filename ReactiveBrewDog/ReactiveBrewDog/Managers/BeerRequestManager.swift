@@ -12,10 +12,10 @@ import Result
 
 class BeerRequestManager {
     
-    let beerEndpoint = "https://api.punkapi.com/v2/beers?page=1&per_page=80"
+    static let beerEndpoint = "https://api.punkapi.com/v2/beers?page=1&per_page=80"
     
-    func getBeers() -> SignalProducer<[Beer], APIError> {
-        return APIManager.getData(urlString: beerEndpoint).attemptMap { data in
+    static func getMoreBeer() -> SignalProducer<[Beer], APIError> {
+        return APIManager.fetchData(urlString: beerEndpoint).attemptMap { data in
             do {
                 let beerList = try JSONDecoder().decode([Beer].self, from: data)
                 return Result(value: beerList)

@@ -15,6 +15,11 @@ class ListBeerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var abvLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
     
-    
-    
+    var viewModel: BeerCellViewModel! {
+        didSet {
+            nameLabel.text = viewModel.displayName
+            abvLabel.text = viewModel.displayAbvIbu
+            taglineLabel.text = viewModel.displayTagline
+        }
+    }
 }
