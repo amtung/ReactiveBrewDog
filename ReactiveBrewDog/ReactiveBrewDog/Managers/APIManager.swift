@@ -12,6 +12,7 @@ import ReactiveSwift
 enum APIError: Error {
     case dataTask(error: Error)
     case jsonDecode(error: Error)
+    case image(error: Error)
     case unknown
 }
 

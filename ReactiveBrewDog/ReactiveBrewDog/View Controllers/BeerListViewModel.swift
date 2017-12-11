@@ -10,6 +10,51 @@ import Foundation
 import ReactiveSwift
 import Result
 
+
+enum BeerListDisplayType: Int {
+    case list, tile, large
+    
+    var sectionInsets: UIEdgeInsets {
+        switch self {
+        case .list:
+            return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+        case .tile:
+            return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+        case .large:
+            return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+        }
+    }
+    
+    var itemsPerRow: CGFloat {
+        switch self {
+        case .large, .list:
+            return 1
+        case .tile:
+            return 4
+        }
+    }
+    
+    var heightMultiplier: CGFloat {
+        switch self {
+        case .list:
+            return 0.33
+        case .tile, .large:
+            return 2
+        }
+    }
+    
+    var cellIdentifier: String {
+        switch self {
+        case .list:
+            return "listCell"
+        case .tile:
+            return "tileCell"
+        case .large:
+            return "largeCell"
+        }
+    }
+}
+
 class BeerListViewModel: NSObject {
     
     var beers: [Beer] = [] {
@@ -19,11 +64,19 @@ class BeerListViewModel: NSObject {
         }
     }
     
+    private var viewModels: [Beer: BeerCellViewModel] = [:]
+    
+    var displayTypeMP = MutableProperty<BeerListDisplayType>(.list)
+        
     var beerUpdatePipe = Signal<Void, NoError>.pipe()
     
     override init() {
         super.init()
         fetchMoreBeer()
+        
+        displayTypeMP.producer.on { _ in
+            self.beerUpdatePipe.input.send(value: ())
+        }.start()
     }
     
     // why dos this have to be lazy?
@@ -37,7 +90,7 @@ class BeerListViewModel: NSObject {
 //    }()
     
     private func fetchMoreBeer() {
-        BeerRequestManager.getMoreBeer().on(failed: { error in
+        BeerRequestManager.fetchMoreBeer().on(failed: { error in
             print(error)
         }, value: { [weak self] (beers) in
             self?.beers += beers
@@ -53,6 +106,7 @@ class BeerListViewModel: NSObject {
     
     func getCellViewModel(for indexPath: IndexPath) -> BeerCellViewModel {
         let beer = beers[indexPath.row]
-        return BeerCellViewModel(beer: beer)
+        viewModels[beer] = viewModels[beer] ?? BeerCellViewModel(beer: beer)
+        return viewModels[beer]!
     }
 }

@@ -1,22 +1,24 @@
 //
-//  ListBeerCollectionViewCell.swift
+//  LargeBeerCollectionViewCell.swift
 //  ReactiveBrewDog
 //
-//  Created by Tom Seymour on 12/8/17.
+//  Created by Tom Seymour on 12/10/17.
 //  Copyright © 2017 Tom Seymour. All rights reserved.
 //
 
 import UIKit
 import ReactiveSwift
-import ReactiveCocoa
 
-class ListBeerCollectionViewCell: BeerCollectionViewCell {
+class LargeBeerCollectionViewCell: BeerCollectionViewCell {
+    
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var beerImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var abvLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
+    @IBOutlet weak var abvLabel: UILabel!
+    @IBOutlet weak var beerImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     override var viewModel: BeerCellViewModel! {
         didSet {
@@ -27,6 +29,5 @@ class ListBeerCollectionViewCell: BeerCollectionViewCell {
             activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
         }
     }
-    
     
 }

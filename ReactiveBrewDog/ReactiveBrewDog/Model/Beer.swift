@@ -8,7 +8,16 @@
 
 import Foundation
 
-struct Beer: Codable {
+struct Beer: Codable, Hashable {
+    
+    static func ==(lhs: Beer, rhs: Beer) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    var hashValue: Int {
+        return id.hashValue
+    }
+    
     let name: String
     let id: Int
     let tagline: String

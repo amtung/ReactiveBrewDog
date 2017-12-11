@@ -10,6 +10,8 @@ target 'ReactiveBrewDog' do
         pod 'ReactiveSwift'
 	pod 'ReactiveCocoa'
 	pod 'SnapKit'
+        pod 'Alamofire'
+	pod 'AlamofireImage'
 
 
   target 'ReactiveBrewDogTests' do
