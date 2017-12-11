@@ -10,6 +10,9 @@ import UIKit
 
 class BeerCollectionViewCell: UICollectionViewCell {
     
-    var viewModel: BeerCellViewModel!
-    
+    var viewModel: BeerCellViewModel! {
+        didSet {
+            setNeedsLayout()
+        }
+    }
 }
