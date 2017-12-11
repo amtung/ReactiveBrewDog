@@ -19,7 +19,7 @@ class TileBeerCollectionViewCell: BeerCollectionViewCell {
     
     override var viewModel: BeerCellViewModel! {
         didSet {
-            nameLabel.text = viewModel.displayName
+            nameLabel.reactive.text <~ viewModel.displayNameMP
             beerImageView.reactive.image <~ viewModel.beerImageMP
             activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
         }

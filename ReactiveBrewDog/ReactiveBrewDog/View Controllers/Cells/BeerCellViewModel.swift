@@ -13,30 +13,29 @@ import AlamofireImage
 
 class BeerCellViewModel {
     
-    var beer: Beer!
+    private var beer: Beer! 
     
-    var displayName: String {
-        return beer.name
-    }
+    // change this to MP
+    var displayTaglineMP = MutableProperty<String>("")
+    var displayAbvIbuMP = MutableProperty<String>("")
+    var displayNameMP = MutableProperty<String>("")
     
-    var displayTagline: String {
-        return beer.tagline
-    }
-    
-    var displayAbvIbu: String {
-        return "abv: \(beer.abv)%"
-    }
+    let beerRequestManager = BeerRequestManagerFactory.getInstance(type: BeerRequestManagerFactory.type)
     
     var beerImageMP = MutableProperty<UIImage?>(nil)
     var isLoadingImageMP = MutableProperty<Bool>(true)
 
     init(beer: Beer) {
         self.beer = beer
+        self.displayNameMP.value = "\(beer.id): \(beer.name)"
+        self.displayTaglineMP.value = beer.tagline
+        self.displayAbvIbuMP.value = "abv: \(beer.abv)%"
         fetchBeerImage()
     }
     
     private func fetchBeerImage() {
-        BeerRequestManager.fetchBeerImage(urlString: beer.imageURLString).on(failed: { error in
+        beerImageMP.value = nil
+        beerRequestManager.fetchBeerImage(urlString: beer.imageURLString).on(failed: { error in
             print(error)
         }, value: { [weak self] image in
             self?.beerImageMP.value = image

@@ -20,10 +20,10 @@ class ListBeerCollectionViewCell: BeerCollectionViewCell {
     
     override var viewModel: BeerCellViewModel! {
         didSet {
-            nameLabel.text = viewModel.displayName
-            abvLabel.text = viewModel.displayAbvIbu
-            taglineLabel.text = viewModel.displayTagline
-            beerImageView.reactive.image <~ viewModel.beerImageMP
+            nameLabel.reactive.text <~ viewModel.displayNameMP
+            abvLabel.reactive.text <~ viewModel.displayAbvIbuMP
+            taglineLabel.reactive.text <~ viewModel.displayTaglineMP
+            beerImageView.reactive.image <~ viewModel.beerImageMP 
             activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
         }
     }
