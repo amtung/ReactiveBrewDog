@@ -10,7 +10,6 @@
 		0E9442F3544834B36052BCA5 /* Pods_ReactiveBrewDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5519045E5D1A05268BC6123 /* Pods_ReactiveBrewDog.framework */; };
 		46765DA4FEB63F649C49ABB5 /* Pods_ReactiveBrewDogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296CCB7EE8523E0D403111ED /* Pods_ReactiveBrewDogTests.framework */; };
 		9DFE36AEA78E1DDA6A6F6288 /* Pods_ReactiveBrewDogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C8D4F757F60D97753108FD /* Pods_ReactiveBrewDogUITests.framework */; };
-		DE4AC5321FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC5311FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift */; };
 		DE4AC5341FDDE2DC002454B1 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC5331FDDE2DC002454B1 /* BeerCollectionViewCell.swift */; };
 		DE4AC5361FDDE784002454B1 /* LargeBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC5351FDDE784002454B1 /* LargeBeerCollectionViewCell.swift */; };
 		DE4AC5771FDF2B7D002454B1 /* TestBeerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4AC5761FDF2B7D002454B1 /* TestBeerImage.png */; };
@@ -56,7 +55,6 @@
 		322FF9EFCB79324907817701 /* Pods-ReactiveBrewDogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogTests/Pods-ReactiveBrewDogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		32DF2DF5C693C9CC60AEB669 /* Pods-ReactiveBrewDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDog/Pods-ReactiveBrewDog.debug.xcconfig"; sourceTree = "<group>"; };
 		75777C10666812EA4ADF8540 /* Pods-ReactiveBrewDogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogTests/Pods-ReactiveBrewDogTests.release.xcconfig"; sourceTree = "<group>"; };
-		DE4AC5311FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileBeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE4AC5331FDDE2DC002454B1 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE4AC5351FDDE784002454B1 /* LargeBeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeBeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE4AC5761FDF2B7D002454B1 /* TestBeerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestBeerImage.png; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 				DECF76C71FDB22DE00D54DF9 /* BeerCellViewModel.swift */,
 				DE4AC5331FDDE2DC002454B1 /* BeerCollectionViewCell.swift */,
 				DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */,
-				DE4AC5311FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift */,
 				DE4AC5351FDDE784002454B1 /* LargeBeerCollectionViewCell.swift */,
 			);
 			path = Cells;
@@ -559,7 +556,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4AC5341FDDE2DC002454B1 /* BeerCollectionViewCell.swift in Sources */,
-				DE4AC5321FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift in Sources */,
 				DECF76C51FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift in Sources */,
 				DE9C86CA1FDAF33100840276 /* APIManager.swift in Sources */,
 				DE4AC5361FDDE784002454B1 /* LargeBeerCollectionViewCell.swift in Sources */,

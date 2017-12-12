@@ -91,7 +91,7 @@
                                             <outlet property="taglineLabel" destination="xNr-Sp-wpy" id="A6Y-jW-FPR"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tileCell" id="iBS-KT-YhH" customClass="TileBeerCollectionViewCell" customModule="ReactiveBrewDog" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tileCell" id="iBS-KT-YhH" customClass="BeerCollectionViewCell" customModule="ReactiveBrewDog" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="117" width="114" height="417"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

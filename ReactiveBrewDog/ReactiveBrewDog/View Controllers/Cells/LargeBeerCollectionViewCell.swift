@@ -10,15 +10,9 @@ import UIKit
 import ReactiveSwift
 
 class LargeBeerCollectionViewCell: BeerCollectionViewCell {
-    
-    
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+        
     @IBOutlet weak var taglineLabel: UILabel!
     @IBOutlet weak var abvLabel: UILabel!
-    @IBOutlet weak var beerImageView: UIImageView!
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    
     
     override var viewModel: BeerCellViewModel! {
         didSet {

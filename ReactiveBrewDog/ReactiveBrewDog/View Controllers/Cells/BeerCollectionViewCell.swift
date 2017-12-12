@@ -7,10 +7,23 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
 
 class BeerCollectionViewCell: UICollectionViewCell {
     
-    var viewModel: BeerCellViewModel!
+    @IBOutlet weak var beerImageView: UIImageView!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var viewModel: BeerCellViewModel! {
+        didSet {
+            nameLabel.reactive.text <~ viewModel.displayNameMP
+            beerImageView.reactive.image <~ viewModel.beerImageMP
+            activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
+        }
+    }
     
     
 }

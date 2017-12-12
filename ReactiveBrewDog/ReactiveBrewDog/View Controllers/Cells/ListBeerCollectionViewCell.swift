@@ -12,9 +12,7 @@ import ReactiveCocoa
 
 class ListBeerCollectionViewCell: BeerCollectionViewCell {
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var beerImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+   
     @IBOutlet weak var abvLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
     
