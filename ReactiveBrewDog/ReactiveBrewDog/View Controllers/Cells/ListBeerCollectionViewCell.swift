@@ -11,7 +11,6 @@ import ReactiveSwift
 import ReactiveCocoa
 
 class ListBeerCollectionViewCell: BeerCollectionViewCell {
-    
    
     @IBOutlet weak var abvLabel: UILabel!
     @IBOutlet weak var taglineLabel: UILabel!
@@ -25,6 +24,4 @@ class ListBeerCollectionViewCell: BeerCollectionViewCell {
             activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
         }
     }
-    
-    
 }

@@ -12,73 +12,15 @@ import Result
 import Alamofire
 import AlamofireImage
 
-enum BeerRequestManagerType {
-    case offline
-    case online
-}
-
-class BeerRequestManagerFactory {
-    
-    static var type: BeerRequestManagerType = .offline
-    
-    static func getInstance(type: BeerRequestManagerType) -> BeerRequestManagerTestable {
-        switch type {
-        case .offline:
-            return OfflineBeerRequestManager()
-        case .online:
-            return BeerRequestManager()
-        }
-    }
-}
-
-
-protocol BeerRequestManagerTestable {
-    func fetchMoreBeer() -> SignalProducer<[Beer], APIError>
-    func fetchBeerImage(urlString: String) -> SignalProducer<UIImage?, APIError>
-}
-
-
-
-
-class OfflineBeerRequestManager: BeerRequestManagerTestable {
-    
-    func fetchMoreBeer() -> SignalProducer<[Beer], APIError> {
-        return SignalProducer<[Beer], APIError> { observable, disposable in
-            
-            if let path = Bundle.main.path(forResource: "beers", ofType: "json") {
-                do {
-                    let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                    let beers = try JSONDecoder().decode([Beer].self, from: data)
-                    observable.send(value: beers)
-                    observable.sendCompleted()
-                } catch {
-                    observable.send(error: APIError.jsonDecode(error: error))
-                }
-            }
-        }
-    }
-    
-    func fetchBeerImage(urlString: String) -> SignalProducer<UIImage?, APIError> {
-        return SignalProducer<UIImage?, APIError> { observable, disposable in
-            let image = UIImage(named: "TestBeerImage")
-            observable.send(value: image)
-            observable.sendCompleted()
-        }
-    }
-    
-    
-    
-}
-
 
 class BeerRequestManager: BeerRequestManagerTestable {
     
-    var beerEndpoint: String {
+    private var beerEndpoint: String {
         return "https://api.punkapi.com/v2/beers?page=1&per_page=80"
     }
     
-    
-    
+    private let imageDownloader = ImageDownloader()
+
     func fetchMoreBeer() -> SignalProducer<[Beer], APIError> {
         return APIManager.fetchData(urlString: beerEndpoint).attemptMap { data in
             print(self.beerEndpoint)
@@ -92,13 +34,11 @@ class BeerRequestManager: BeerRequestManagerTestable {
         }
     }
     
-    private let downloader = ImageDownloader()
-
     func fetchBeerImage(urlString: String) -> SignalProducer<UIImage?, APIError> {
         return SignalProducer { observer, disposable in
             guard let url = URL(string: urlString) else { return }
             
-            self.downloader.download(URLRequest(url: url)) { response in
+            self.imageDownloader.download(URLRequest(url: url)) { response in
                 
                 switch response.result {
                 case .success(let image):
@@ -109,7 +49,6 @@ class BeerRequestManager: BeerRequestManagerTestable {
                     observer.sendCompleted()
                 }
             }
-            
         }
     }
 }

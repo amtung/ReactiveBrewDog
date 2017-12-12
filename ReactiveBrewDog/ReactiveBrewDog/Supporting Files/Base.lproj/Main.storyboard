@@ -133,7 +133,7 @@
                                             <outlet property="nameLabel" destination="83n-RS-ZnS" id="yqm-eT-J03"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="largeCell" id="eW0-mz-ABz" customClass="LargeBeerCollectionViewCell" customModule="ReactiveBrewDog" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="largeCell" id="eW0-mz-ABz" customClass="ListBeerCollectionViewCell" customModule="ReactiveBrewDog" customModuleProvider="target">
                                         <rect key="frame" x="124" y="103" width="216" height="445"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

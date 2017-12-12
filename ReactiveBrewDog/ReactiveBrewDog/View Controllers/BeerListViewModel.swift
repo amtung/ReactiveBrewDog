@@ -30,15 +30,15 @@ class BeerListViewModel: NSObject {
         fetchMoreBeer()
     }
     
-    // why dos this have to be lazy?
-    lazy var fetchMoreBeerAction: Action<Void, Void, NoError> = {
-        return Action { _ in
-            return SignalProducer<Void, NoError> { [weak self] observer, _ in
-                self?.fetchMoreBeer()
-                observer.sendCompleted()
-            }
-        }
-    }()
+//    // why dos this have to be lazy?
+//    lazy var fetchMoreBeerAction: Action<Void, Void, NoError> = {
+//        return Action { _ in
+//            return SignalProducer<Void, NoError> { [weak self] observer, _ in
+//                self?.fetchMoreBeer()
+//                observer.sendCompleted()
+//            }
+//        }
+//    }()
     
     func fetchMoreBeer() {
         beerRequestManager.fetchMoreBeer().on(failed: { error in
@@ -48,13 +48,11 @@ class BeerListViewModel: NSObject {
         }).start()            
     }
     
-    
     // MARK: - Collection View Stuff
     
     func itemsInSection(_ section: Int) -> Int {
         return beers.count
     }
-    
     
     func getCellViewModel(for indexPath: IndexPath) -> BeerCellViewModel {
         let beer = beers[indexPath.row]

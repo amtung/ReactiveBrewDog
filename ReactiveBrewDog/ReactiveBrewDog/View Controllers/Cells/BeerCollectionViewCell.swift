@@ -13,7 +13,6 @@ import ReactiveCocoa
 class BeerCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var beerImageView: UIImageView!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -24,6 +23,4 @@ class BeerCollectionViewCell: UICollectionViewCell {
             activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
         }
     }
-    
-    
 }
