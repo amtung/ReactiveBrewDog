@@ -15,7 +15,7 @@ class BeerListViewModel: NSObject {
     
     private var beers: [Beer] = [] {
         didSet {
-            self.beerUpdatePipe.input.send(value: ())
+            self.beerUpdateObserver.send(value: ())
         }
     }
     
@@ -23,9 +23,15 @@ class BeerListViewModel: NSObject {
     
     private var viewModels: [Beer: BeerCellViewModel] = [:]
         
-    var beerUpdatePipe = Signal<Void, NoError>.pipe()
+//    var beerUpdatePipe = Signal<Void, NoError>.pipe()
+    
+    private var beerUpdateObserver: Signal<Void, NoError>.Observer
+    var beerUpdateSignal: Signal<Void, NoError>
     
     override init() {
+        let (beerUpdateSignal, beerUpdateObserver) = Signal<Void, NoError>.pipe()
+        self.beerUpdateObserver = beerUpdateObserver
+        self.beerUpdateSignal = beerUpdateSignal
         super.init()
         fetchMoreBeer()
     }
@@ -58,6 +64,11 @@ class BeerListViewModel: NSObject {
         let beer = beers[indexPath.row]
         viewModels[beer] = viewModels[beer] ?? BeerCellViewModel(beer: beer)
         return viewModels[beer]!
+    }
+    
+    func getDetailViewModel(for indexPath: IndexPath) -> BeerDetailViewModel {
+        let beer = beers[indexPath.row]
+        return BeerDetailViewModel(beer: beer)
     }
     
     func isLastIndex(_ indexPath: IndexPath) -> Bool {

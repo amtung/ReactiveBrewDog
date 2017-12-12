@@ -89,6 +89,7 @@
                                             <outlet property="beerImageView" destination="LB0-5c-28h" id="8Ma-09-XVb"/>
                                             <outlet property="nameLabel" destination="Kku-US-q9x" id="p9d-Gc-ude"/>
                                             <outlet property="taglineLabel" destination="xNr-Sp-wpy" id="A6Y-jW-FPR"/>
+                                            <segue destination="UGN-QG-u67" kind="show" id="qsh-Xb-DZc"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tileCell" id="iBS-KT-YhH" customClass="BeerCollectionViewCell" customModule="ReactiveBrewDog" customModuleProvider="target">
@@ -131,6 +132,7 @@
                                             <outlet property="activityIndicator" destination="lrv-ru-WDJ" id="ORG-mo-a4B"/>
                                             <outlet property="beerImageView" destination="Cpu-Uc-Gcp" id="z5L-ZD-vnX"/>
                                             <outlet property="nameLabel" destination="83n-RS-ZnS" id="yqm-eT-J03"/>
+                                            <segue destination="UGN-QG-u67" kind="show" identifier="detailSegue" id="0Rj-Ze-oRJ"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="largeCell" id="eW0-mz-ABz" customClass="ListBeerCollectionViewCell" customModule="ReactiveBrewDog" customModuleProvider="target">
@@ -193,6 +195,7 @@
                                             <outlet property="beerImageView" destination="crT-3M-Tk8" id="dyK-9D-ePJ"/>
                                             <outlet property="nameLabel" destination="irS-wK-VW5" id="nS8-Bz-jBD"/>
                                             <outlet property="taglineLabel" destination="sJ9-5b-kEV" id="8we-7d-8hV"/>
+                                            <segue destination="UGN-QG-u67" kind="show" id="imW-XG-8eD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -228,6 +231,97 @@
             </objects>
             <point key="canvasLocation" x="476" y="132.68365817091455"/>
         </scene>
+        <!--Beer Detail View Controller-->
+        <scene sceneID="7XS-n4-ZTt">
+            <objects>
+                <viewController id="UGN-QG-u67" customClass="BeerDetailViewController" customModule="ReactiveBrewDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Nl-1z-IfX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="64g-OS-LFQ">
+                                <rect key="frame" x="120.5" y="64" width="133.5" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="64g-OS-LFQ" secondAttribute="height" multiplier="1:2" id="k1U-VA-75y"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMu-Ij-JzW">
+                                <rect key="frame" x="12" y="360" width="351" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5n-K5-gDl">
+                                <rect key="frame" x="12" y="335" width="351" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-G7-rzm">
+                                <rect key="frame" x="12" y="385" width="351" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WFx-DH-dAB"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the IBU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvI-ck-rnB">
+                                <rect key="frame" x="20" y="505" width="124" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-ZC-9pM">
+                                <rect key="frame" x="137.5" y="541" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OKh-oV-U2y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="l4d-Ww-sUh">
+                                <rect key="frame" x="177" y="187" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FdW-jg-cz3" firstAttribute="trailing" secondItem="2gh-G7-rzm" secondAttribute="trailing" constant="12" id="7Vo-va-3gK"/>
+                            <constraint firstItem="2gh-G7-rzm" firstAttribute="top" secondItem="OMu-Ij-JzW" secondAttribute="bottom" constant="4" id="977-FT-Hjl"/>
+                            <constraint firstItem="OMu-Ij-JzW" firstAttribute="top" secondItem="f5n-K5-gDl" secondAttribute="bottom" constant="4" id="9oi-L4-Cel"/>
+                            <constraint firstItem="64g-OS-LFQ" firstAttribute="height" secondItem="4Nl-1z-IfX" secondAttribute="height" multiplier="0.4" id="EeU-Oj-OID"/>
+                            <constraint firstItem="l4d-Ww-sUh" firstAttribute="centerX" secondItem="64g-OS-LFQ" secondAttribute="centerX" id="FnB-g1-JAU"/>
+                            <constraint firstItem="FdW-jg-cz3" firstAttribute="trailing" secondItem="f5n-K5-gDl" secondAttribute="trailing" constant="12" id="HbG-rj-vTH"/>
+                            <constraint firstItem="l4d-Ww-sUh" firstAttribute="centerY" secondItem="64g-OS-LFQ" secondAttribute="centerY" id="LF8-nU-JmC"/>
+                            <constraint firstItem="FdW-jg-cz3" firstAttribute="trailing" secondItem="OMu-Ij-JzW" secondAttribute="trailing" constant="12" id="V3F-EQ-pGD"/>
+                            <constraint firstItem="64g-OS-LFQ" firstAttribute="centerX" secondItem="FdW-jg-cz3" secondAttribute="centerX" id="cvG-T2-hhb"/>
+                            <constraint firstItem="64g-OS-LFQ" firstAttribute="top" secondItem="FdW-jg-cz3" secondAttribute="top" id="f5Q-Z0-ZOQ"/>
+                            <constraint firstItem="uvI-ck-rnB" firstAttribute="leading" secondItem="FdW-jg-cz3" secondAttribute="leading" constant="20" id="hK8-Ok-9c1"/>
+                            <constraint firstItem="OMu-Ij-JzW" firstAttribute="leading" secondItem="FdW-jg-cz3" secondAttribute="leading" constant="12" id="iOM-Xb-vgk"/>
+                            <constraint firstItem="ntC-ZC-9pM" firstAttribute="top" secondItem="uvI-ck-rnB" secondAttribute="bottom" constant="12" id="jUK-3Z-MvH"/>
+                            <constraint firstItem="ntC-ZC-9pM" firstAttribute="centerX" secondItem="FdW-jg-cz3" secondAttribute="centerX" id="ppt-Bi-iY5"/>
+                            <constraint firstItem="uvI-ck-rnB" firstAttribute="top" secondItem="2gh-G7-rzm" secondAttribute="bottom" constant="20" id="qst-nt-qq9"/>
+                            <constraint firstItem="f5n-K5-gDl" firstAttribute="leading" secondItem="FdW-jg-cz3" secondAttribute="leading" constant="12" id="rhY-Sn-Aos"/>
+                            <constraint firstItem="2gh-G7-rzm" firstAttribute="leading" secondItem="FdW-jg-cz3" secondAttribute="leading" constant="12" id="sw9-k6-m1S"/>
+                            <constraint firstItem="f5n-K5-gDl" firstAttribute="top" secondItem="64g-OS-LFQ" secondAttribute="bottom" constant="4" id="v6w-bV-V55"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FdW-jg-cz3"/>
+                    </view>
+                    <connections>
+                        <outlet property="abvLabel" destination="f5n-K5-gDl" id="4uR-fy-ISI"/>
+                        <outlet property="activityIndicator" destination="l4d-Ww-sUh" id="GSW-3S-H15"/>
+                        <outlet property="beerImageView" destination="64g-OS-LFQ" id="Ukx-mG-yIY"/>
+                        <outlet property="descriptionTextView" destination="2gh-G7-rzm" id="Aae-Xu-SkQ"/>
+                        <outlet property="ibuGuessTextField" destination="ntC-ZC-9pM" id="7eM-5r-7wO"/>
+                        <outlet property="taglineLabel" destination="OMu-Ij-JzW" id="u2q-41-rpi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tv-8P-MWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="129"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="57N-Nl-XfQ">
             <objects>
@@ -247,4 +341,7 @@
             <point key="canvasLocation" x="-244" y="133"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0Rj-Ze-oRJ"/>
+    </inferredMetricsTieBreakers>
 </document>

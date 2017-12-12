@@ -79,7 +79,7 @@ class BeerListViewController: UIViewController {
             self?.collectionView.reloadData()
         }
         
-        viewModel.beerUpdatePipe.output.observe(on: UIScheduler()).observeValues { [weak self] _ in
+        viewModel.beerUpdateSignal.observe(on: UIScheduler()).observeValues { [weak self] _ in
             self?.collectionView.reloadData()
         }
     }
@@ -103,6 +103,14 @@ extension BeerListViewController: UICollectionViewDataSource {
 //            viewModel.fetchMoreBeer()
 //        }
 //    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? BeerCollectionViewCell,
+            let ip = collectionView.indexPath(for: cell),
+            let detailVC = segue.destination as? BeerDetailViewController {
+            detailVC.viewModel = viewModel.getDetailViewModel(for: ip)
+        }
+    }
     
 }
 
