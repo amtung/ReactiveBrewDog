@@ -15,16 +15,14 @@ class BeerCellViewModel {
     
     private var beer: Beer! 
     
-    // change this to MP
     var displayTaglineMP = MutableProperty<String>("")
     var displayAbvIbuMP = MutableProperty<String>("")
     var displayNameMP = MutableProperty<String>("")
-    
-    let beerRequestManager = BeerRequestManagerFactory.getInstance(type: BeerRequestManagerFactory.type)
-    
     var beerImageMP = MutableProperty<UIImage?>(nil)
     var isLoadingImageMP = MutableProperty<Bool>(true)
-
+    
+    private let beerRequestManager = BeerRequestManagerFactory.getInstance(type: BeerRequestManagerFactory.type)
+    
     init(beer: Beer) {
         self.beer = beer
         self.displayNameMP.value = "\(beer.id): \(beer.name)"

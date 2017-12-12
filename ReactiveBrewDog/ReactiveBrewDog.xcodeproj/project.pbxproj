@@ -10,13 +10,13 @@
 		0E9442F3544834B36052BCA5 /* Pods_ReactiveBrewDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5519045E5D1A05268BC6123 /* Pods_ReactiveBrewDog.framework */; };
 		46765DA4FEB63F649C49ABB5 /* Pods_ReactiveBrewDogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296CCB7EE8523E0D403111ED /* Pods_ReactiveBrewDogTests.framework */; };
 		9DFE36AEA78E1DDA6A6F6288 /* Pods_ReactiveBrewDogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C8D4F757F60D97753108FD /* Pods_ReactiveBrewDogUITests.framework */; };
-		DE4AC5321FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC5311FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift */; };
 		DE4AC5341FDDE2DC002454B1 /* BeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC5331FDDE2DC002454B1 /* BeerCollectionViewCell.swift */; };
-		DE4AC5361FDDE784002454B1 /* LargeBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC5351FDDE784002454B1 /* LargeBeerCollectionViewCell.swift */; };
 		DE4AC5771FDF2B7D002454B1 /* TestBeerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4AC5761FDF2B7D002454B1 /* TestBeerImage.png */; };
 		DE4AC5781FDF2C58002454B1 /* TestBeerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DE4AC5761FDF2B7D002454B1 /* TestBeerImage.png */; };
 		DE4AC57A1FDF33FA002454B1 /* beers.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4AC5791FDF33FA002454B1 /* beers.json */; };
 		DE4AC57B1FDF33FA002454B1 /* beers.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4AC5791FDF33FA002454B1 /* beers.json */; };
+		DE4AC57D1FE023F4002454B1 /* ListBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC57C1FE023F4002454B1 /* ListBeerCollectionViewCell.swift */; };
+		DE4AC57E1FE023F4002454B1 /* ListBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC57C1FE023F4002454B1 /* ListBeerCollectionViewCell.swift */; };
 		DE9C86911FDAEDF000840276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86901FDAEDF000840276 /* AppDelegate.swift */; };
 		DE9C86961FDAEDF000840276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9C86941FDAEDF000840276 /* Main.storyboard */; };
 		DE9C86991FDAEDF000840276 /* ReactiveBrewDog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86971FDAEDF000840276 /* ReactiveBrewDog.xcdatamodeld */; };
@@ -29,7 +29,6 @@
 		DE9C86C81FDAF29700840276 /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86C71FDAF29700840276 /* BeerListViewModel.swift */; };
 		DE9C86CA1FDAF33100840276 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9C86C91FDAF33100840276 /* APIManager.swift */; };
 		DECF76C31FDB04F100D54DF9 /* BeerRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECF76C21FDB04F100D54DF9 /* BeerRequestManager.swift */; };
-		DECF76C51FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */; };
 		DECF76C81FDB22DE00D54DF9 /* BeerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECF76C71FDB22DE00D54DF9 /* BeerCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,11 +55,10 @@
 		322FF9EFCB79324907817701 /* Pods-ReactiveBrewDogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogTests/Pods-ReactiveBrewDogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		32DF2DF5C693C9CC60AEB669 /* Pods-ReactiveBrewDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDog/Pods-ReactiveBrewDog.debug.xcconfig"; sourceTree = "<group>"; };
 		75777C10666812EA4ADF8540 /* Pods-ReactiveBrewDogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogTests/Pods-ReactiveBrewDogTests.release.xcconfig"; sourceTree = "<group>"; };
-		DE4AC5311FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileBeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE4AC5331FDDE2DC002454B1 /* BeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCollectionViewCell.swift; sourceTree = "<group>"; };
-		DE4AC5351FDDE784002454B1 /* LargeBeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeBeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE4AC5761FDF2B7D002454B1 /* TestBeerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestBeerImage.png; sourceTree = "<group>"; };
 		DE4AC5791FDF33FA002454B1 /* beers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = beers.json; sourceTree = "<group>"; };
+		DE4AC57C1FE023F4002454B1 /* ListBeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE9C868D1FDAEDF000840276 /* ReactiveBrewDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveBrewDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9C86901FDAEDF000840276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE9C86951FDAEDF000840276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 		DE9C86C71FDAF29700840276 /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
 		DE9C86C91FDAF33100840276 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DECF76C21FDB04F100D54DF9 /* BeerRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRequestManager.swift; sourceTree = "<group>"; };
-		DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBeerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DECF76C71FDB22DE00D54DF9 /* BeerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCellViewModel.swift; sourceTree = "<group>"; };
 		E3FD40C64392393E059C0FCD /* Pods-ReactiveBrewDogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogUITests/Pods-ReactiveBrewDogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E90C9F9325900E76C038472A /* Pods-ReactiveBrewDogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveBrewDogUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveBrewDogUITests/Pods-ReactiveBrewDogUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -244,9 +241,7 @@
 			children = (
 				DECF76C71FDB22DE00D54DF9 /* BeerCellViewModel.swift */,
 				DE4AC5331FDDE2DC002454B1 /* BeerCollectionViewCell.swift */,
-				DECF76C41FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift */,
-				DE4AC5311FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift */,
-				DE4AC5351FDDE784002454B1 /* LargeBeerCollectionViewCell.swift */,
+				DE4AC57C1FE023F4002454B1 /* ListBeerCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -559,14 +554,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4AC5341FDDE2DC002454B1 /* BeerCollectionViewCell.swift in Sources */,
-				DE4AC5321FDDDCB9002454B1 /* TileBeerCollectionViewCell.swift in Sources */,
-				DECF76C51FDB22AB00D54DF9 /* ListBeerCollectionViewCell.swift in Sources */,
 				DE9C86CA1FDAF33100840276 /* APIManager.swift in Sources */,
-				DE4AC5361FDDE784002454B1 /* LargeBeerCollectionViewCell.swift in Sources */,
 				DE9C86C51FDAF25800840276 /* BeerListViewController.swift in Sources */,
 				DECF76C31FDB04F100D54DF9 /* BeerRequestManager.swift in Sources */,
 				DE9C86991FDAEDF000840276 /* ReactiveBrewDog.xcdatamodeld in Sources */,
 				DECF76C81FDB22DE00D54DF9 /* BeerCellViewModel.swift in Sources */,
+				DE4AC57D1FE023F4002454B1 /* ListBeerCollectionViewCell.swift in Sources */,
 				DE9C86C21FDAF1B600840276 /* Beer.swift in Sources */,
 				DE9C86911FDAEDF000840276 /* AppDelegate.swift in Sources */,
 				DE9C86C81FDAF29700840276 /* BeerListViewModel.swift in Sources */,
@@ -577,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4AC57E1FE023F4002454B1 /* ListBeerCollectionViewCell.swift in Sources */,
 				DE9C86A91FDAEDF000840276 /* ReactiveBrewDogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
