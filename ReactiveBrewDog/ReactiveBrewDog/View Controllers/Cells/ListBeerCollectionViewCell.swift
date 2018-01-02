@@ -17,11 +17,11 @@ class ListBeerCollectionViewCell: BeerCollectionViewCell {
     
     override var viewModel: BeerCellViewModel! {
         didSet {
-            nameLabel.reactive.text <~ viewModel.displayNameMP
-            abvLabel.reactive.text <~ viewModel.displayAbvIbuMP
-            taglineLabel.reactive.text <~ viewModel.displayTaglineMP
-            beerImageView.reactive.image <~ viewModel.beerImageMP 
-            activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
+            disposable += nameLabel.reactive.text <~ viewModel.displayNameMP
+            disposable += abvLabel.reactive.text <~ viewModel.displayAbvIbuMP
+            disposable += taglineLabel.reactive.text <~ viewModel.displayTaglineMP
+            disposable += beerImageView.reactive.image <~ viewModel.beerImageMP
+            disposable += activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
         }
     }
 }

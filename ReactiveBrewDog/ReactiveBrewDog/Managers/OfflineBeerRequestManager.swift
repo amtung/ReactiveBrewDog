@@ -19,7 +19,7 @@ enum BeerRequestManagerType {
 }
 
 class BeerRequestManagerFactory {
-    static var type: BeerRequestManagerType = .offline
+    static var type: BeerRequestManagerType = .online
     static func getInstance(type: BeerRequestManagerType) -> BeerRequestManagerTestable {
         switch type {
         case .offline:

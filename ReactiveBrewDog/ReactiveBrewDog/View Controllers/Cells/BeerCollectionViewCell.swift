@@ -16,11 +16,18 @@ class BeerCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var disposable = CompositeDisposable()
+    
     var viewModel: BeerCellViewModel! {
         didSet {
-            nameLabel.reactive.text <~ viewModel.displayNameMP
-            beerImageView.reactive.image <~ viewModel.beerImageMP
-            activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
+            disposable += nameLabel.reactive.text <~ viewModel.displayNameMP
+            disposable += beerImageView.reactive.image <~ viewModel.beerImageMP
+            disposable += activityIndicator.reactive.isAnimating <~ viewModel.isLoadingImageMP
         }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposable.dispose()
     }
 }
