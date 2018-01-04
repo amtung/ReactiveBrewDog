@@ -1,0 +1,6 @@
+framework module Pods_ReactiveBrewDogTests {
+  umbrella header "Pods-ReactiveBrewDogTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
